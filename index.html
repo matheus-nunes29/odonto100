@@ -6,7 +6,14 @@
   <title>Odonto100 – Implantes e Protocolos em Londrina</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <!-- Fonts carregam de forma não-bloqueante -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" /></noscript>
+  <!-- Preload LCP image (hero) -->
+  <link rel="preload" as="image" href="foto profisisonal.jpg" />
+  <!-- Preload logo -->
+  <link rel="preload" as="image" href="logo.png" />
 
   <style>
     /* ─── TOKENS ─────────────────────────────────────────── */
@@ -25,7 +32,7 @@
       --text:       #0D1A47;
 
       --serif:      'Cormorant Garamond', Georgia, serif;
-      --sans:       'DM Sans', system-ui, sans-serif;
+      --sans:       'DM Sans', system-ui, -apple-system, sans-serif;
 
       --radius-sm:  8px;
       --radius-md:  16px;
@@ -1194,7 +1201,7 @@
       <!-- Visual column -->
       <div class="hero-visual fade-up fade-up-2">
         <div class="hero-img-wrap">
-          <img src="foto profisisonal.jpg" alt="Dr. Rafael Baptista" style="width:100%;height:100%;object-fit:cover;" />
+          <img src="foto profisisonal.jpg" alt="Dr. Rafael Baptista" style="width:100%;height:100%;object-fit:cover;" fetchpriority="high" decoding="async" />
         </div>
 
         <div class="float-card float-card-1">
@@ -1293,7 +1300,7 @@
         </div>
         <div class="pain-visual">
           <div class="pain-img-wrap">
-            <img src="antes e depois.jpg" alt="Antes e Depois Odonto100" style="width:100%;height:100%;object-fit:cover;" />
+            <img src="antes e depois.jpg" alt="Antes e Depois Odonto100" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async" />
           </div>
           <div class="pain-badge">
             <div class="pain-badge-num">+500</div>
@@ -1416,7 +1423,7 @@
           </div>
         </div>
         <div class="benefits-img">
-          <img src="antes e depois.jpg" alt="Resultado Odonto100" style="width:100%;height:100%;object-fit:cover;" />
+          <img src="antes e depois.jpg" alt="Resultado Odonto100" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async" />
           <div class="benefits-img-badge">
             <div class="benefits-img-badge-stars">★★★★★</div>
             <strong>Pacientes satisfeitos</strong>
@@ -1479,7 +1486,7 @@
       <div class="doctor-layout">
         <div class="doctor-img-wrap">
           <div class="doctor-img">
-            <img src="foto profisisonal.jpg" alt="Dr. Rafael Baptista" style="width:100%;height:100%;object-fit:cover;" />
+            <img src="foto profisisonal.jpg" alt="Dr. Rafael Baptista" style="width:100%;height:100%;object-fit:cover;" loading="lazy" decoding="async" />
           </div>
           <div class="doctor-credential">
             <div class="doctor-credential-name">Dr. Rafael Baptista</div>
