@@ -119,8 +119,10 @@
       align-items: center;
       gap: 0;
       text-decoration: none;
+      flex-shrink: 0;
     }
-    .nav-logo svg { height: 40px; width: auto; }
+    .nav-logo img { height: 36px; width: auto; max-width: 160px; object-fit: contain; }
+    .nav-logo svg { height: 36px; width: auto; }
     .nav-cta {
       display: inline-flex;
       align-items: center;
@@ -131,10 +133,12 @@
       font-weight: 600;
       font-size: .875rem;
       letter-spacing: .04em;
-      padding: 11px 22px;
+      padding: 11px 18px;
       border-radius: var(--radius-xl);
       transition: background .25s, transform .2s, box-shadow .25s;
       animation: pulse 2.8s ease infinite;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
     .nav-cta:hover {
       background: var(--teal-dark);
